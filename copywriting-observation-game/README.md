@@ -14,9 +14,13 @@
 
 更新 `main` 分支後，GitHub Pages 會部署最新內容。
 
+## 封面圖檔位於 `assets/hero-island-3d-title.jpg`。網頁以此圖片直接呈現主標題。
+
 ## 修改題目
 
-開啟 `index.html`，在 `<script>` 區段中的 `questionBank` 編輯區修改題目。每題包含：
+開啟 `index.html`，在 `<script>` 區段中的 `questionBank` 編輯區封面圖檔位於 `assets/hero-island-3d-title.jpg`。網頁以此圖片直接呈現主標題。
+
+## 修改題目。每題包含：
 
 - `kind`：內容類型
 - `goal`：這題的內容目標
@@ -33,3 +37,4 @@
 ## 網站範圍
 
 此版本是初階學習體驗：不會要求學生貼上自己的文案，也不會提供個人化改寫。所有題目與解析都在瀏覽器端執行，不需 API 金鑰或資料庫。
+
