@@ -6,12 +6,13 @@
 
 直接用瀏覽器開啟 `index.html`，或在此資料夾啟動簡單靜態伺服器。
 
-## 發布到 GitHub Pages
+## 網站網址
 
-1. 建立 GitHub repository，將本資料夾內檔案推送到 `main` 分支。
-2. 開啟 repository 的 **Settings → Pages**。
-3. 在 **Build and deployment** 選擇 **Deploy from a branch**，Branch 選 `main`，資料夾選 `/(root)`，按 **Save**。
-4. 等待 GitHub Pages 部署完成，頁面會顯示網站網址。
+本工具放在既有 GitHub Pages 專案的 `copywriting-observation-game/` 資料夾：
+
+`https://leonyang0512-stack.github.io/self-media-positioning-game/copywriting-observation-game/`
+
+更新 `main` 分支後，GitHub Pages 會部署最新內容。
 
 ## 修改題目
 
@@ -19,6 +20,7 @@
 
 - `kind`：內容類型
 - `goal`：這題的內容目標
+- `ask`：題目要學生判斷的問題，可留空使用預設問題
 - `scenario`：題目情境
 - `a`、`b`：兩個開場
 - `best`：較適合此目標的選項，填 `a` 或 `b`
@@ -26,7 +28,7 @@
 - `clues`：判斷線索標籤
 - `lesson`：補充提醒
 
-目前包含混合練習、旅遊分享、知識教學、故事共鳴、商品推薦、親子生活六類。每回合最多五題；題目出場順序會隨機調整。
+目前包含混合練習、旅遊分享、知識教學、故事共鳴、商品推薦、親子生活、美食功能型、美妝／跳操、運動連續紀錄、親子省錢、專業教學與品牌借勢。題目可比較開場金句，也可比較畫面安排與呈現策略。每回合最多五題；題目出場順序會隨機調整。
 
 ## 網站範圍
 
