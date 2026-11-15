@@ -30,7 +30,7 @@ if(weak.length){fix.push(`「${weak.join('、')}」太籠統或不符合明確�
 if(sales.length){fix.push(`「${sales.join('、')}」商業感比較重，粉絲還少時陌生人可能先有戒心。可換成更自然的說法，例如「努力存錢中」。`);score-=Math.min(1.5,sales.length*.7)}
 if(business){fix.push('公司、品牌或工作室名稱放在最前面，會讓人先看到組織而不是你。把暱稱或職業身份放前面。');score-=1}
 if(gimmick){fix.push('第一段像玩梗或口號，沒有先說清楚你是誰。保留暱稱，把職業／身份移到開頭。');score-=1}
-if(parts.length>4){fix.push(`目前有 ${parts.length} 段資訊，稍微太滿。聚焦一個主題，再留一到兩個最重要的搜尋詞。`);score-=1}
+if(parts.length>4||(parts.length>=4&&first.length>10)){fix.push(`目前有 ${parts.length} 段資訊，或開頭塞了太多描述，稍微太滿。聚焦一個主題，再留一到兩個最重要的搜尋詞。`);score-=1}
 const repeated=parts.some((a,i)=>parts.some((b,j)=>i!==j&&a.length>1&&b.length>1&&(a.includes(b)||b.includes(a))));if(repeated){fix.push('有些詞在不同片段重複，刪掉重複的類別詞，留下更具體的那個。');score-=.5}
 if(!keywords.length)fix.push('還看不到具體服務或內容關鍵字。想想觀眾會直接搜尋什麼，例如教學項目、商品名稱或明確主題。');
 if(topic&&localTopics.includes(topic)&&!knownCity)fix.push(`「${topic}」常有地區搜尋需求，可評估加上城市名${city?'「'+city+'」':''}。`);
