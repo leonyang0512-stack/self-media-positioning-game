@@ -62,7 +62,14 @@ body{background:#f8f4e9 radial-gradient(circle at 12% 8%,#fff7d6 0,transparent 2
 /* Direct-to-play: hero artwork only, then interactive first question. */
 .hero{margin-bottom:16px}.hero-scene{aspect-ratio:3/2}.quest-status{margin-top:15px}.step{margin-top:15px}
 @media(max-width:620px){.hero{margin-bottom:12px}.quest-status{margin-top:12px}}
-</style></head><body><main class="wrap"><div class="top"><div class="brand">🎮 冒牌生｜定位探索研究所</div><span class="small">療癒探索遊戲 · 約 4 分鐘</span></div><section class="hero" aria-label="自媒體定位探索遊戲首頁"><div class="hero-scene" role="img" aria-label="3D 療癒村莊與定位探索遊戲說明圖片，圖片僅供閱讀，請往下滑動開始答題"></div></section><div class="quest-status"><strong id="questLevel">LEVEL 1 / 5</strong><span id="questMission">任務：探索你的創作者身分</span><span class="quest-stars">✦ ✦ ✦</span></div><div class="step" id="progress"></div><section class="card" id="screen"></section><div class="footer">本工具是內容策略練習，不保證流量或收入。醫療、金融、稅務及產品功效內容請先查證並遵守相關規範。</div></main><script>
+
+/* Portrait artwork must display in full, never crop as a cover background. */
+.hero{width:min(100%,650px);margin:0 auto 18px;padding:0;border:0;border-radius:24px;background:transparent;overflow:hidden;box-shadow:0 12px 30px #507d5630}
+.hero-poster{display:block;width:100%;height:auto;object-fit:contain}
+.hero-scene{display:none}
+.quest-status{margin-top:22px}
+@media(max-width:620px){.hero{width:100%;border-radius:16px;margin-bottom:16px}.quest-status{margin-top:16px}}
+</style></head><body><main class="wrap"><div class="top"><div class="brand">🎮 冒牌生｜定位探索研究所</div><span class="small">療癒探索遊戲 · 約 4 分鐘</span></div><section class="hero" aria-label="自媒體定位探索遊戲首頁"><img class="hero-poster" src="自媒體定位探索研究所.png" alt="冒牌生定位探索研究所：四個任務介紹，認識自己、設定目標、評估資源、確認方向。往下滑動開始答題。" loading="eager" decoding="async"></section><div class="quest-status"><strong id="questLevel">LEVEL 1 / 5</strong><span id="questMission">任務：探索你的創作者身分</span><span class="quest-stars">✦ ✦ ✦</span></div><div class="step" id="progress"></div><section class="card" id="screen"></section><div class="footer">本工具是內容策略練習，不保證流量或收入。醫療、金融、稅務及產品功效內容請先查證並遵守相關規範。</div></main><script>
 const state={step:0,roles:[],goals:[],business:'',interests:[],hours:'',budget:'',face:'',outside:'',worry:'',preferred:'',compare:'',platforms:[{name:'',fans:''}],format:'both'};
 const roles=[['home','家庭主婦／照顧者'],['pro','醫師／會計師／記帳士等專業人士'],['insurance','保險／金融業務'],['beauty','美業／按摩／醫美／婚禮服務'],['seller','微商／直銷／團購'],['creator','自媒體／AI／行銷／課程工作者'],['teacher','學校老師／家教'],['pet','寵物飼主'],['office','一般上班族'],['other','其他／還沒有明確方向']];
 const goals=[['fans','先增加粉絲和曝光'],['goods','銷售產品／保健品／團購'],['service','銷售保險／專業服務／顧問'],['course','銷售課程／知識／數位商品'],['team','招募成員／建立團隊']];
