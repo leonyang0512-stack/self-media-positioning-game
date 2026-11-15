@@ -10,19 +10,31 @@
 </head>
 <body><main class="wrap">
 <header class="top"><div class="brand">🌱 社群命名靈感所</div><a href="../">← 回到前三秒留人大挑戰</a></header>
-<section class="hero"><span class="eyebrow">🔎 IG 姓名欄關鍵字練習</span><h1>讓對的人，<br>一眼找到你</h1><p>輸入暱稱和內容類別，整理成幾種清楚、好搜尋的姓名提案。成長初期先把你是誰、在哪裡、提供什麼說明白。</p></section>
-<section class="panel"><h2>✍️ 先告訴我你的主題</h2><p class="desc">暱稱和內容類別為必填；地點、興趣或服務項目可補充，建議不要一次放太多主題。</p>
+<section class="hero"><span class="eyebrow">🔎 IG 姓名欄關鍵字練習</span><h1>讓對的人，<br>一眼找到你</h1><p>輸入暱稱和內容類別，整理成幾種清楚、好搜尋的姓名提案。成長初期先把你是誰、在哪裡、提供什麼說明白；公司、品牌或工作室名稱先放後面。</p></section>
+<section class="panel"><h2>✍️ 先告訴我你的主題</h2><p class="desc">暱稱和內容類別為必填；地點、興趣或服務項目可補充，建議不要一次放太多主題。名稱先放人，再放地點、類別、服務關鍵字。</p>
 <div class="form-grid">
 <div class="field"><label for="nickname">你的暱稱</label><input id="nickname" maxlength="20" placeholder="例如：詹姆士、小花、綠豆" autocomplete="nickname"></div>
 <div class="field"><label for="category">主要內容類別</label><select id="category"><option value="">選一個最核心的主題</option><option value="美食">美食探店</option><option value="食譜">食譜料理</option><option value="親子">親子育兒</option><option value="旅遊">旅遊</option><option value="美妝">美妝彩妝</option><option value="穿搭">穿搭時尚</option><option value="運動">跳操運動</option><option value="飲料">超商飲料特調</option><option value="理財">理財報稅</option><option value="美髮">美髮造型</option><option value="美甲">美甲設計</option><option value="心理測驗">心理測驗</option><option value="自訂">其他／自訂類別</option></select></div>
 <div class="field" id="customWrap" hidden><label for="customCategory">自訂主要關鍵字</label><input id="customCategory" maxlength="16" placeholder="例如：台中咖啡、霧眉教學"></div>
-<div class="field"><label for="location">地點關鍵字（選填）</label><input id="location" maxlength="12" list="places" placeholder="例如：台北、桃園、高雄"><datalist id="places"><option value="台北"><option value="新北"><option value="桃園"><option value="台中"><option value="台南"><option value="高雄"><option value="台東"><option value="基隆"><option value="新竹"><option value="嘉義"><option value="屏東"><option value="花蓮"><option value="宜蘭"></datalist><small>在地服務或探店內容，盡量寫出具體縣市。</small></div>
+<div class="field"><label for="location">地點關鍵字（選填）</label><input id="location" maxlength="12" list="places" placeholder="例如：台北、桃園、高雄"><datalist id="places"><option value="台北"><option value="新北"><option value="桃園"><option value="台中"><option value="台南"><option value="高雄"><option value="台東"><option value="基隆"><option value="新竹"><option value="嘉義"><option value="屏東"><option value="花蓮"><option value="宜蘭"><option value="東京"><option value="大阪"><option value="京都"><option value="福岡"><option value="溫哥華"></datalist><small>在地服務或自助旅遊，盡量寫城市，例如台北、東京；國家名稱通常不夠具體。</small></div>
 <div class="field full"><label for="services">興趣、服務項目或內容特色（選填）</label><input id="services" maxlength="48" placeholder="例如：平價小吃、咖啡廳分享；用逗號分開"><small>挑 1–3 個最有代表性的詞。避免把多個不相關主題都放進姓名欄。</small></div>
-<div class="field full"><div class="helper">📌 這份提案依照成長初期的命名原則：暱稱＋清楚的搜尋關鍵字。地點、興趣類別、服務項目按你的內容挑選，不需要全部塞進名稱。</div></div>
+<div class="field full"><div class="helper">📌 命名順序：個人暱稱 → 觀眾會搜尋的城市／興趣／服務關鍵字 → 1–2 個內容特色。暱稱請填人名或大家認得的個人稱呼；公司、品牌、工作室名稱不要搶在前面。關鍵字要具體，例如「東京」比「日本」更符合自助旅行者的搜尋方式。</div></div>
 </div><button class="btn" id="generate">✨ 幫我產生名稱建議</button></section>
 <section class="panel results" id="results" aria-live="polite"><div class="result-head"><div><span class="eyebrow">📒 島民命名提案</span><h2 id="resultTitle">這些名字，讓人更快認識你</h2></div><p id="resultMeta"></p></div><div class="cards" id="cards"></div><div class="warning" id="warnings"></div><button class="btn" id="regenerate">🔄 換一批提案</button></section>
 <section class="panel"><h2>📖 好名字怎麼整理？</h2><p class="desc">姓名欄不是把所有經歷都塞進去，而是讓陌生人快速辨認你的主題和特色。</p><div class="steps"><div class="step"><b>1. 暱稱</b><span>讓人知道怎麼稱呼你，也保留個人辨識度。</span></div><div class="step"><b>2. 核心關鍵字</b><span>選清楚的地點、興趣類別或服務項目，幫助觀眾理解你的內容。</span></div><div class="step"><b>3. 只留相關特色</b><span>創意可以放在後面；「生活、日常」通常說不清楚你提供什麼。</span></div></div>
-<div class="guide-grid"><div class="guide-card"><h3 class="bad">❌ 主題太多、看不出定位</h3><p>抽獎！帶你飛，幫你賺錢！00後女大生創業</p><p>詹姆士的生活分享｜美食分享｜減重資訊｜理財資訊</p><p>小花｜親子育兒｜美食探店｜夫妻日常｜斜槓創業｜無痛開店</p></div><div class="guide-card"><h3 class="good">⭕️ 暱稱＋具體關鍵字</h3><p>詹姆士愛探店：台北美食｜新北平價小吃｜咖啡廳分享</p><p>小花的餐桌：食譜分享｜懶人烘焙｜減脂料理</p><p>高雄彩妝師綠豆｜化妝教學｜霧眉霧唇｜美妝開箱</p></div></div>
+<div class="guide-grid"><div class="guide-card"><h3 class="bad">❌ 主題太多、看不出定位</h3><p>抽獎！帶你飛，幫你賺錢！00後女大生創業</p><p>詹姆士的生活分享｜美食分享｜減重資訊｜理財資訊</p><p>小花｜親子育兒｜美食探店｜夫妻日常｜斜槓創業｜無痛開店</p><p>小花愛化妝</p></div><div class="guide-card"><h3 class="good">⭕️ 暱稱＋具體關鍵字</h3><p>詹姆士愛探店：台北美食｜新北平價小吃｜咖啡廳分享</p><p>小花的餐桌：食譜分享｜懶人烘焙｜減脂料理</p><p>高雄彩妝師綠豆｜化妝教學｜霧眉霧唇｜美妝開箱</p><p>小花的化妝教學</p></div></div>
+<h3 style="margin:20px 0 4px">🔥 可以照著改暱稱的命名範本</h3><p class="desc">保留「人物暱稱在前＋清楚關鍵字在後」的結構，依你的類別替換暱稱和服務詞。</p>
+<div class="guide-grid name-patterns">
+<div class="guide-card"><h3>親子／居家</h3><p><b>小凡是老師</b>｜親子育兒・收納整理・居家佈置</p></div>
+<div class="guide-card"><h3>美髮／居家運動</h3><p><b>Abby</b>｜台中清水美髮師｜居家運動｜懶人運動</p></div>
+<div class="guide-card"><h3>工程／職人生活</h3><p><b>宸宸｜工地媽媽</b>｜工程日常 × 油漆裝潢</p></div>
+<div class="guide-card"><h3>保險／家庭理財</h3><p><b>果果</b>｜保險二寶媽的存錢週記</p></div>
+<div class="guide-card"><h3>居家運動</h3><p><b>小姿私人日記</b>｜居家運動｜健身操</p></div>
+<div class="guide-card"><h3>食譜／烘焙</h3><p><b>美美</b>｜減脂甜點・懶人烘焙</p></div>
+<div class="guide-card"><h3>親子／健康生活</h3><p><b>綺夢</b>｜溫哥華媽媽｜親子教養 × 健康生活</p></div>
+<div class="guide-card"><h3>超商開箱</h3><p><b>蜜絲開箱</b>｜711 好物｜全家美食｜全聯必買</p></div>
+</div>
+<div class="guide-grid"><div class="guide-card"><h3 class="bad">❌ 名字有創意，搜尋意圖不清楚</h3><p>曼琉球民宿 → 品牌詞不一定是大家會搜尋的詞</p><p>小花愛化妝 → 沒說明提供教學或哪種內容</p><p>小象愛日本 → 對自助旅行者來說，目的城市更明確</p><p>凍齡、逆齡、美魔女、北部、中部、南部、高屏、北北基、生活、日常等詞，搜尋意圖通常較弱。</p></div><div class="guide-card"><h3 class="good">⭕️ 讓關鍵字說明觀眾要找什麼</h3><p><b>小琉球民宿</b> 比「曼琉球民宿」更直觀地說明地點和服務。</p><p><b>小花的化妝教學</b> 比「小花愛化妝」更符合想找化妝教學的搜尋需求。</p><p><b>小象愛東京</b> 比「小象愛日本」更具體，適合分享東京自助旅行。</p><p>品牌、公司或工作室名稱不要搶在人物前面；先讓人記住你，再用關鍵字補充主題。若想保留在地服務感，可寫「小琉球民宿老闆小花｜在地住宿推薦」，讓城市和服務詞清楚出現。</p></div></div>
 <div class="warning"><b>用詞提醒：</b>「抽獎、帶你飛、幫你賺錢、微商、直銷、減肥、瘦身、股票、醫美、斜槓」可能讓部分觀眾先產生戒心。依你的命名原則，這些詞適合謹慎使用或放在具體內容脈絡中，不必當成帳號姓名的主標。平台推薦沒有保證；貼文、影片和帳號名稱都應依內容與平台當下規範確認。</div></section>
 <footer class="footer">命名建議是靈感，不是平台推薦保證。選好名稱後，確認內容真的符合名稱帶出的期待。</footer>
 </main>
@@ -37,13 +49,13 @@ function cleanKeywords(cat,services){const src=[...(presets[cat]||[]),...service
 function makeNames(){const rawNick=$('#nickname').value.trim(),nick=rawNick.replace(/[\p{Extended_Pictographic}\uFE0F]/gu,'').trim(),loc=$('#location').value.trim(),cat=$('#category').value==='自訂'?$('#customCategory').value.trim():$('#category').value; if(!nick||!cat){alert('先填暱稱，並選擇或輸入一個主要內容類別。');return}
 const kws=cleanKeywords(cat,$('#services').value);const place=loc?`${loc}`:'';const main=cat;const terms=kws.length?kws:[cat];const a=terms[0],b=terms[1]||'',c=terms[2]||'';const compact=(arr)=>arr.filter(Boolean).filter((x,i,self)=>self.indexOf(x)===i).slice(0,3).join('｜');
 const options=[
-{label:'清楚搜尋型',name:`${nick}｜${compact([place+main,a,b])}`,why:'暱稱放前面，再補上主要類別和最多兩個相關關鍵字，陌生人容易看懂主題。'},
-{label:'個人風格型',name:`${nick}的${main}筆記｜${compact([place+a,b,c])}`,why:'保留個人感，同時用具體類別和服務詞說清楚你分享什麼。'},
-{label:'地區服務型',name:`${place}${main}${nick}｜${compact([a,b,c])}`,why:loc?'先呈現地點和服務主題，適合在地探店、工作室或區域型服務。':'如果你提供在地服務，可補上縣市名稱，讓附近的人更容易辨認。'},
-{label:'興趣特色型',name:`${nick}愛${a}｜${compact([place+main,b,c])}`,why:'用一個有記憶點的興趣語氣開頭，後面仍保留清楚的主題字。'},
-{label:'專業服務型',name:`${nick}${main}｜${compact([place+a,b,c])}`,why:'姓名欄直接交代主要內容，適合教學、接案、工作室或服務型帳號。'}
+{label:'暱稱＋搜尋關鍵字',name:`${nick}｜${compact([place+main,a,b])}`,why:'先放人物暱稱，再放城市、主要類別和相關服務詞；名稱一眼看得出是誰、提供什麼。'},
+{label:'教學／服務型',name:`${nick}的${main}｜${compact([place+a,b,c])}`,why:'用具體服務或內容類別承接暱稱，例如「小花的化妝教學」，比「小花愛化妝」更符合搜尋需求。'},
+{label:'個人紀錄型',name:`${nick}｜${compact([place+main,a,b])}週記`,why:'想保留生活記錄感，可以放在暱稱後面；前段仍先說明主題和關鍵字。'},
+{label:'主題系列型',name:`${nick}｜${main}分享｜${compact([place+a,b])}`,why:'以人物開頭，再接一個核心主題與少量特色，避免品牌或工作室名稱搶在前面。'},
+{label:'在地／城市型',name:`${nick}｜${compact([place+main,a,b,c])}`,why:loc?'保留人物在前，將城市和服務放在後面；自助旅遊或在地服務可優先寫具體城市。':'若內容有明確服務地區，可填入城市名稱；「北部」或國家名通常不如具體城市清楚。'}
 ];
-const warnings=[];if(nick!==rawNick)warnings.push('暱稱裡的表情符號已移除；IG 姓名欄建議以可搜尋的文字關鍵字為主。');const broad=['北部','中部','南部','高屏','北台灣','南台灣'];if(broad.includes(loc))warnings.push(`「${loc}」範圍較廣，建議換成具體縣市，例如台北、台中或高雄。`);const hit=caution.filter(w=>`${nick} ${cat} ${$('#services').value}`.includes(w));if(hit.length)warnings.push(`你輸入的「${hit.join('、')}」可能讓部分觀眾先產生戒心。確認它是你的核心服務，再決定是否放進姓名欄。`);if(!loc)warnings.push('若你的內容和在地服務有關，補上具體地點會更容易被附近觀眾辨認。');warnings.push('關鍵字不要重複；「桃園美食｜美食小吃」就重複了「美食」。名稱聚焦 1 個主題，再挑 1–3 個相關特色。');
+const warnings=[];if(nick!==rawNick)warnings.push('暱稱裡的表情符號已移除；IG 姓名欄建議以可搜尋的文字關鍵字為主。');const broad=['北部','中部','南部','高屏','北台灣','南台灣','北北基'];if(broad.includes(loc))warnings.push(`「${loc}」範圍較廣，建議換成具體城市，例如台北、台中或高雄。`);if(['日本','韓國','泰國','美國','加拿大'].includes(loc))warnings.push(`「${loc}」是國家名稱；若內容是自助旅行，建議改成主要城市，例如東京、大阪或溫哥華。`);const hit=caution.filter(w=>`${nick} ${cat} ${$('#services').value}`.includes(w));if(hit.length)warnings.push(`你輸入的「${hit.join('、')}」可能讓部分觀眾先產生戒心。確認它是你的核心服務，再決定是否放進姓名欄。`);if(!loc)warnings.push('若你的內容和在地服務有關，補上具體地點會更容易被附近觀眾辨認。');warnings.push('關鍵字不要重複；「桃園美食｜美食小吃」就重複了「美食」。名稱聚焦 1 個主題，再挑 1–3 個相關特色。');
 $('#resultTitle').textContent=`${nick}的命名提案`;
 $('#resultMeta').textContent=`主題：${cat}${loc?` · 地點：${loc}`:''}`;
 $('#cards').innerHTML=options.map((o,i)=>`<article class="name-card"><span class="label">提案 ${i+1} · ${esc(o.label)}</span><button class="copy" data-copy="${i}">複製</button><h3>${esc(o.name)}</h3><p>${esc(o.why)}</p></article>`).join('');
